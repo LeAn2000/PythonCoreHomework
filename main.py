@@ -35,10 +35,10 @@ def Click_thread(value):
     new_member = np.random.randint(0, 1000, (1, 2)).astype(np.float32)
     # show map function
     def show():
-        plt.scatter(red[:, 0], red[:, 1], 100, 'r', 's')
-        plt.scatter(blue[:, 0], blue[:, 1], 100, 'b', '<')
-        plt.scatter(yellow[:, 0], yellow[:, 1], 100, 'y', '^')
-        plt.scatter(new_member[:, 0], new_member[:, 1], 100, 'g', 'o')
+        plt.scatter(red[:, 0], red[:, 1], 50, 'r', 's')
+        plt.scatter(blue[:, 0], blue[:, 1], 50, 'b', '<')
+        plt.scatter(yellow[:, 0], yellow[:, 1], 50, 'y', '^')
+        plt.scatter(new_member[:, 0], new_member[:, 1], 50, 'g', 'o')
         plt.show()
 
     btnshow=Button(root,text="Khởi tạo Map",font=('Time New Roman',10),command=show)
@@ -300,4 +300,8 @@ mylist.pack(side=BOTTOM, fill = BOTH)
 scrollbarY.config( command = mylist.yview )
 scrollbarX.config( command = mylist.xview )
 #--------------------------#
+Label(root,text='Chú thích:',font=('Time New Roman',15)).place(x=600,y=10)
+Label(root,text='Màu xanh gán nhãn là 0',font=('Time New Roman',15),bg='Blue').place(x=700,y=12)
+Label(root,text='Màu đò gán nhãn là    1',font=('Time New Roman',15),bg='Red').place(x=700,y=42)
+Label(root,text='Màu vàng gán nhãn là 2',font=('Time New Roman',15),bg='Yellow').place(x=700,y=72)
 root.mainloop()
